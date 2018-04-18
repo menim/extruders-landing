@@ -72,25 +72,25 @@ gulp.task('useref', function() {
 gulp.task('browserSync', function() {
 	browserSync.init({
 		server: {
-			baseDir: ''
+			baseDir: '../van-web'
 		},
 	})
 });
 
 
 gulp.task('sass', function() {
-	return gulp.src('app/scss/**/*.scss')
+	return gulp.src('sass/**/*.scss')
 	.pipe(sass())
-	.pipe(gulp.dest('app/css'))
+	.pipe(gulp.dest('css'))
 	.pipe(browserSync.reload({
 		stream: true
 	}))
 });
 
 gulp.task('watch',['browserSync', 'sass'], function() {
-	gulp.watch('app/scss/**/*.scss', ['sass']);
-	gulp.watch('app/*.html', browserSync.reload);
-	gulp.watch('app/js/**/*.js', browserSync.reload);
+	gulp.watch('sass/**/*.scss', ['sass']);
+	gulp.watch('*.html', browserSync.reload);
+	gulp.watch('js/**/*.js', browserSync.reload);
 });
 
 gulp.task('build', function(callback) {
