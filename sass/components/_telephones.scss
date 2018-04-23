@@ -1,0 +1,28 @@
+.telephones {
+  color: $ecru-white;
+  font-family: 'Roboto Bold', sans-serif;
+  font-size: $font-size-x-md;
+
+  &__item {
+    color: $ecru-white;
+    display: block;
+    letter-spacing: .9px;
+    text-decoration: none;
+  }
+}
+
+.telephones_header_theme {
+  padding-left: 5.5em;
+  position: relative;
+
+  &:before {
+    background-image: url('../images/phone-icon.svg');
+    background-size: cover;
+    content: '';
+    fill: $ecru-white;
+    height: 52px;
+    left: 15px;
+    position: absolute;
+    width: 49px;
+  }
+}
