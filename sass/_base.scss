@@ -1,6 +1,12 @@
+@include font-face('Roboto', '../fonts/roboto-regular');
+@include font-face('Roboto Black', '../fonts/roboto-black');
+@include font-face('Roboto Bold', '../fonts/roboto-bold');
+
 html,
 body {
+  font-family: Roboto, sans-serif;
   font-size: $font-size-regular;
   margin: 0;
   padding: 0;
 }
+
