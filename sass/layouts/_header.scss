@@ -1,0 +1,18 @@
+.header {
+  background-image: url('../images/header-bg.jpg');
+  background-size: cover;
+  padding-top: 1.625em;
+  position: relative;
+
+  &:before {
+    content: '';
+    background-color: $black-op-70;
+    bottom: 0;
+    left: 0;
+    position: absolute;
+    right: 0;
+    top: 0;
+
+
+  }
+}
