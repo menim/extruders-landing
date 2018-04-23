@@ -1,0 +1,19 @@
+.logo {
+  color: $ecru-white;
+  font-size: $font-size-regular;
+
+  &__img {
+    margin-right: 1.75em;
+    vertical-align: middle;
+  }
+
+  &__text {
+    display: inline-block;
+    line-height: 1.75;
+    vertical-align: middle;
+  }
+
+  &__text_header {
+    margin-right: -45px;
+  }
+}
