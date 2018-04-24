@@ -3,11 +3,12 @@
   font-family: 'Roboto Black', sans-serif;
   font-size: $font-size-x-lg;
   letter-spacing: .04em;
-  line-height: 1.4em;
-  margin: 1.14em 0;
+  line-height: 1.4;
+  margin: 1.1em 0;
   text-transform: uppercase;
+
+  &_light {
+    color: $ecru-white;
+  }
 }
 
-.section-headline_light {
-  color: $ecru-white;
-}

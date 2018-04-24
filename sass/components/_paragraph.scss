@@ -3,8 +3,10 @@
   font-family: Roboto, sans-serif;
   font-size: $font-size-md;
   line-height: 1.7;
+
+  &_color_tradewind {
+    color: $tradewind;
+  }
 }
 
-.paragraph_color_tradewind {
-  color: $tradewind;
-}
+
