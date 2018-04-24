@@ -12,10 +12,10 @@
 }
 
 .telephones_header_theme {
-  padding-left: 5.5em;
+  padding-left: 5.3em;
   position: relative;
 
-  &:before {
+  &::before {
     background-image: url('../images/phone-icon.svg');
     background-size: cover;
     content: '';
