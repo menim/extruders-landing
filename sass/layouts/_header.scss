@@ -4,10 +4,10 @@
   padding-top: 1.625em;
   position: relative;
 
-  &:before {
-    content: '';
+  &::before {
     background-color: $black-op-70;
     bottom: 0;
+    content: '';
     left: 0;
     position: absolute;
     right: 0;
@@ -20,5 +20,9 @@
 
   &__headline {
     margin-top: 155px;
+  }
+
+  &__basic-btn {
+    margin-top: 38px;
   }
 }
