@@ -10,5 +10,13 @@
   font-size: $font-size-btn;
   letter-spacing: .02em;
   line-height: 1;
-  padding: 1.2em 2.1em;
+  padding: 1.1em 2.1em 1.2em;
+
+  &_theme_secondary {
+    background-color: $shadow-green;
+    background-image: linear-gradient($shadow-green 0%, $tradewind 100%);
+  }
 }
+
+
+
