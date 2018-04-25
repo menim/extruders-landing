@@ -3,9 +3,19 @@
 }
 
 .shadow {
-  box-shadow: 2px 2px 15px 0 $black-op-30;
+  box-shadow: 2px 2px 15px $black-op-30;
 }
 
 .full-width {
   width: 100%;
+}
+
+.m-t-lg {
+  //margin-top: 63px;
+  margin-bottom: 4.4em;
+}
+
+.m-b-lg {
+  //margin-bottom: 80px;  
+  margin-bottom: 8.75em;
 }
