@@ -1,3 +1,11 @@
 .text-center {
   text-align: center;
 }
+
+.shadow {
+  box-shadow: 2px 2px 15px 0 $black-op-30;
+}
+
+.full-width {
+  width: 100%;
+}
