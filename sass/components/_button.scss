@@ -12,11 +12,36 @@
   line-height: 1;
   padding: 1.1em 2.1em 1.2em;
 
+  &:hover,
+  &:focus {
+    background-color: $sushi;
+    background-image: linear-gradient($gimblet 0%, $sushi 100%);
+  }
+
   &_theme_secondary {
     background-color: $shadow-green;
     background-image: linear-gradient($shadow-green 0%, $tradewind 100%);
+
+    &:hover,
+    &:focus {
+      background-color: $wedgewood;
+      background-image: linear-gradient($summer-green 0%, $wedgewood 100%);
+    }
+  }
+
+  &_theme_third {
+    background-color: $red;
+    background-image: linear-gradient(to top, $red 0%, $carnation 100%);
+    border-radius: 28px;
+    min-width: 14.5em;
+    padding-bottom: 1.1em;
+
+    &:hover,
+    &:focus {
+      background-color: $sanset-orange;
+      background-image: linear-gradient(to top, $milano-red 0%, $sanset-orange 100%);
+    }
   }
 }
-
 
 
