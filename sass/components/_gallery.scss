@@ -1,0 +1,10 @@
+.gallery {
+  margin-bottom: 0;
+  padding-left: 0;
+
+  &__item {
+    list-style: none;
+    line-height: 1;
+    margin-bottom: 1.6875em;
+  }
+}
