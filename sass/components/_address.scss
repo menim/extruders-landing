@@ -1,0 +1,12 @@
+.address {
+  color: $tradewind;
+  font-family: Roboto, sans-serif;
+  font-size: $font-size-lg;
+  font-style: normal;
+  line-height: 1.65;
+
+  &__telephones {
+    font: inherit;
+    color: inherit;
+  }
+}
