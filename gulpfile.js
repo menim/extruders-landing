@@ -64,9 +64,25 @@ gulp.task('images', function() {
 gulp.task('useref', function() {
 	return gulp.src('*.html')
 	.pipe(useref())
-	.pipe(gulpIf('*.js', uglify()))
-	.pipe(gulpIf('*.css', cssnano()))
+	.pipe(gulpIf('js/*.js', uglify()))
+	.pipe(gulpIf('css/*.css', cssnano()))
 	.pipe(gulp.dest('dist'))
+});
+
+gulp.task('html', function() {
+   return gulp.src('index.html').pipe(gulp.dest('dist'))
+})
+
+gulp.task('uglify', function(){
+  return gulp.src('js/*.js').
+         pipe(uglify())
+         .pipe(gulp.dest('dist/js'))
+});
+
+gulp.task('minifycss', function(){
+  return gulp.src('css/*.css').
+         pipe(cssnano())
+         .pipe(gulp.dest('dist/css'))
 });
 
 gulp.task('browserSync', function() {
@@ -94,7 +110,7 @@ gulp.task('watch',['browserSync', 'sass'], function() {
 });
 
 gulp.task('build', function(callback) {
-  runSequence('clean:dist', ['sass', 'prefix', 'useref', 'images', 'fonts'], callback)
+  runSequence('clean:dist', ['sass', 'prefix', 'minifycss', 'uglify', 'images', 'html'], callback)
 });
 
 gulp.task('default', function(callback) {
