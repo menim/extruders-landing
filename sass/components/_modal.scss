@@ -1,0 +1,28 @@
+.modal {
+  color: $white;
+  background-color: $sushi;
+  border-radius: 5px;
+  font-size: $font-size-regular;
+  line-height: 1;
+  padding: 5.625em 4em 7.875em; 
+
+
+  &__headline {
+    font-family: 'Roboto Black', sans-serif;
+    font-size: $font-size-xx-lg;
+    letter-spacing: .02em;
+    margin-top: 0;
+    margin-bottom: .4em;
+    text-align: center;
+    text-transform: uppercase;
+  }
+
+  &__subheadline {
+    font-family: Roboto, sans-serif;
+    font-size: $font-size-md;
+    letter-spacing: .02em;
+    margin: 0;
+    text-align: center;
+    text-transform: uppercase;
+  }
+}
