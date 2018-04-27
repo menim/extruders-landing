@@ -1,10 +1,12 @@
 .modal {
   background-color: $sushi;
+  background-image: linear-gradient(-45deg, $wild-willow 0%, $sushi 63%, $tradewind 63%, $shadow-green 100%);
   border-radius: 5px;
   color: $white;
   font-size: $font-size-regular;
   line-height: 1;
   padding: 5.625em 3.875em 7.875em;
+
 
 
   &__headline {
@@ -21,12 +23,13 @@
     font-family: Roboto, sans-serif;
     font-size: $font-size-md;
     letter-spacing: .02em;
-    margin: 0;
+    margin-bottom: 1em;
+    margin-top: 0;
     text-align: center;
     text-transform: uppercase;
   }
 
   &__form {
-    margin-top: .9em;
+    margin-top: 6.5em;
   }
 }
