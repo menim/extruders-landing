@@ -237,12 +237,21 @@
       <h3 class="modal__headline">
         Остались вопросы?
       </h3>
-      <p class="modal__subheadline">Заполните форму и наш менеджер свяжется с вами</p>
-      <form action="" class="form">
-        <label for=""></label>
+      <h4 class="modal__subheadline">Заполните форму и наш менеджер свяжется с вами</h4>
+      <form action="" class="modal__form form text-center">
+        <figure class="form__header"> 
+          <img class="form__avatar" src="images/avatar.png" width="100" height="100" alt="">
+          <figcaption>
+            <h3 class="form__avatar-headline">Ирина Стрельцова</h3>
+            <h4 class="form__avatar-subheadline">Менеджер по продажам</h4>
+          </figcaption> 
+        </figure>
+        <label class="form__label" for="">
         <input class="form__input" type="text" />
-        <label for="name"></label>
+        </label>
+        <label class="form__label" for="name">
         <input id="name" class="form__input" type="text" />
+        </label>
         <button class="basic-btn basic-btn basic-btn_theme_third">Отправить</button>
       </form>
     </div>
