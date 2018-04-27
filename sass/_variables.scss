@@ -11,18 +11,26 @@ $wild-willow: #c2c46f;
 $gimblet: #b4b666;
 $summer-green: #95b7b4;
 $wedgewood: #499594;
-$red: #ff0000;
+$red: #f00;
 $carnation: #f56767;
 $milano-red: #ca0909;
 $sanset-orange: #f94241;
+$gray: #8c8c8c;
+$deep-fir: #001d02;
+$shark: #292a2c;
+$shadow-green: #9ec9c6;
 
 
 //colors with opacity 
 $black-op-70: rgba(0, 0, 0, .7);
 $black-op-30: rgba(0, 0, 0, .3);
+$black-op-40: rgba(0, 0, 0, .4);
 $elephant-op-55: rgba(15, 48, 71, .55);
+$shark-op-28: rgba(41, 42, 44, .28);
 
 //fonts 
+$font-size-x-sm: .875rem;
+$font-size-sm: .9375rem;
 $font-size-regular: 16px;
 $font-size-btn: 1.125rem;
 $font-size-md: 1.1875rem;
