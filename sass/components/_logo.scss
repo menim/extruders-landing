@@ -2,15 +2,29 @@
   color: $ecru-white;
   font-size: $font-size-regular;
 
+  @include media-breakpoint-down(xs) {
+    text-align: center;
+  }
+
   &__img {
     margin-right: 1.75em;
     vertical-align: middle;
+
+    @include media-breakpoint-down(xs) {
+      margin-right: .3em;
+      width: 42px;
+    }
   }
 
   &__text {
     display: inline-block;
     line-height: 1.75;
     vertical-align: middle;
+
+    @include media-breakpoint-down(xs) {
+      font-size: .75rem;
+      text-align: left;
+    }
   }
 
   &__text_header {

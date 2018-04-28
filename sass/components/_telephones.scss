@@ -3,6 +3,10 @@
   font-family: 'Roboto Bold', sans-serif;
   font-size: $font-size-x-md;
 
+  @include media-breakpoint-down(xs) { 
+    text-align: center;
+  }
+
   &__item {
     color: inherit;
     display: block;
@@ -14,6 +18,10 @@
     padding-left: 4.6em;
     position: relative;
 
+    @include media-breakpoint-down(xs) {
+      padding-left: 0;
+    }
+
     &::before {
       background-image: url('../images/phone-icon.svg');
       background-size: cover;
@@ -23,6 +31,10 @@
       left: 0;
       position: absolute;
       width: 49px;
+      
+      @include media-breakpoint-down(xs) {
+        display: none;
+      }
     }
   }
 }
