@@ -1,9 +1,21 @@
 .header {
   background-image: url('../images/header-bg.jpg');
   background-size: cover;
-  padding-bottom: 14.6875em;
+  padding-bottom: 4em;
   padding-top: 1.625em;
   position: relative;
+
+  @include media-breakpoint-up(md) {
+    padding-bottom: 6em;
+  }
+
+  @include media-breakpoint-up(lg) {
+    padding-bottom: 8em;
+  }
+
+  @include media-breakpoint-up(xl) {
+    padding-bottom: 14.6875em;
+  }
 
   &::before {
     background-color: $black-op-70;
