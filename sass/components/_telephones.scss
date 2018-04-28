@@ -11,7 +11,7 @@
   }
 
   &_header_theme {
-    padding-left: 5.3em;
+    padding-left: 4.6em;
     position: relative;
 
     &::before {
@@ -20,7 +20,7 @@
       content: '';
       fill: $ecru-white;
       height: 52px;
-      left: 15px;
+      left: 0;
       position: absolute;
       width: 49px;
     }
