@@ -1,14 +1,21 @@
 .section-headline {
   color: $elephant;
   font-family: 'Roboto Black', sans-serif;
-  font-size: $font-size-x-lg;
+  font-size: $font-size-md;
   letter-spacing: .04em;
   line-height: 1.4;
   margin: 1.1em 0;
   text-transform: uppercase;
 
+  @include media-breakpoint-up(lg) {
+    font-size: $font-size-lg;
+  }
+
+  @include media-breakpoint-up(xl) {
+    font-size: $font-size-x-lg;
+  }
+
   &_light {
     color: $ecru-white;
   }
 }
-
