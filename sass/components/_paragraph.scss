@@ -1,8 +1,12 @@
 .paragraph {
   color: $ecru-white;
   font-family: Roboto, sans-serif;
-  font-size: $font-size-md;
+  font-size: $font-size-btn;
   line-height: 1.7;
+
+  @include media-breakpoint-up(xl) {
+    font-size: $font-size-md;
+  }
 
   &_color_tradewind {
     color: $tradewind;
