@@ -1,8 +1,16 @@
 .headline {
   color: $ecru-white;
   font-family: 'Roboto Black', sans-serif;
-  font-size: $font-size-x-lg;
-  letter-spacing: .035em;
+  font-size: $font-size-md;
+  letter-spacing: .035em;  
   line-height: 1.4;
   text-transform: uppercase;
+
+  @include media-breakpoint-up(md) {
+    font-size: $font-size-lg;
+  }
+
+  @include media-breakpoint-up(xl) {
+    font-size: $font-size-x-lg;
+  } 
 }

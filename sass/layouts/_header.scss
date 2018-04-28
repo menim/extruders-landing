@@ -20,7 +20,15 @@
   }
 
   &__headline {
-    margin-top: 155px;
+    margin-top: 70px;
+
+    @include media-breakpoint-up(md) {
+      margin-top: 100px;
+    }
+
+    @include media-breakpoint-up(xl) {
+      margin-top: 155px;
+    }
   }
 
   &__basic-btn {
