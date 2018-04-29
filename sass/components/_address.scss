@@ -1,12 +1,32 @@
 .address {
   color: $tradewind;
   font-family: Roboto, sans-serif;
-  font-size: $font-size-lg;
+  font-size: $font-size-btn;
   font-style: normal;
   line-height: 1.65;
+  text-align: center;
+
+  @include media-breakpoint-up(md) {
+    font-size: $font-size-md;
+    text-align: left;
+  }
+
+  @include media-breakpoint-up(lg) {
+    font-size: $font-size-x-md;
+  }
+
+  @include media-breakpoint-up(xl) {
+    font-size: $font-size-lg;
+  }
 
   &__telephones {
     font: inherit;
     color: inherit;
+
+
+    @include media-breakpoint-up(md) {
+      text-align: left;
+    }
   }
 }
+

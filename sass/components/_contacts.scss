@@ -1,5 +1,20 @@
 .contacts {
   background-color: $firefly;
-  padding-top: 3.625em;
-  padding-bottom: 11em;
+  padding-top: 1.625em;
+  padding-bottom: 5em;
+
+  @include media-breakpoint-up(md) {
+    padding-top: 2em;
+    padding-bottom: 7em;
+  }
+
+  @include media-breakpoint-up(lg) {
+    padding-top: 2.625em;
+    padding-bottom: 9em;
+  }
+
+  @include media-breakpoint-up(xl) {
+    padding-top: 3.625em;
+    padding-bottom: 11em;
+  }
 }
