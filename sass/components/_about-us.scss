@@ -1,4 +1,9 @@
 .about-us {
-  padding-bottom: 9em;
-  padding-top: 5.8125em;
+  padding-bottom: 4em;
+  padding-top: 3em;
+
+  @include media-breakpoint-up(xl) {
+    padding-bottom: 9em;
+    padding-top: 5.8125em;
+  }
 }
