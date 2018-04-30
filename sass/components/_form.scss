@@ -2,8 +2,12 @@
   background-color: $white;
   border-radius: 5px;
   box-shadow: 1px 1px 10px 5px $shark-op-28;
-  padding: 0 2.4em 1.6875em;
+  padding: 0 1.4em .6875em;
   position: relative;
+
+  @include media-breakpoint-up(lg) {
+    padding: 0 2.4em 1.6875em;
+  }
 
   &__header {
     color: $deep-fir;
@@ -45,7 +49,11 @@
 
   &__label {
     display: block;
-    margin: 1.8em 0;
+    margin: .8em 0;
+
+    @include media-breakpoint-up(lg) {
+      margin: 1.8em 0;
+    }
   }
 
   &__input {
@@ -55,9 +63,13 @@
     color: $gray;
     font-family: 'Roboto Bold', sans-serif;
     font-size: $font-size-btn;
-    height: 3em;
+    height: 2em;
     padding-left: 1em;
     width: 100%;
     -webkit-appearance: none;
+
+    @include media-breakpoint-up(lg) {
+      height: 3em;
+    }
   }
 }
