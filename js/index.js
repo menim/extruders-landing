@@ -39,3 +39,13 @@
     link.click();
   });
 })();
+
+
+(function(){
+  var lb = new Lightbox({
+    selector: '[data-rel="aiLightbox"]', // string
+    lazyload: true, // boolean
+    arrows: true, // boolean
+    counter: true, // boolean
+    slideSpeed: 500 });  
+})();

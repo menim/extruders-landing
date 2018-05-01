@@ -8,6 +8,8 @@
 @import 'base';
 @import 'helpers';
 
+@import 'vendors/lightbox';
+
 @import 'layouts/header';
 @import 'layouts/main';
 @import 'layouts/footer';
@@ -27,4 +29,6 @@
 @import 'components/overlay';
 @import 'components/modal';
 @import 'components/form';
+
+
 
