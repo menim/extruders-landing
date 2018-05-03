@@ -43,36 +43,50 @@
     link.target = "_blank";
   }
 
-  function checkValidity(field) {
-    var regObj = {
-      email: /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/,
-      tel: /^\d{3}-\d{3}-\d{4}$/
-    };
+                        /* Form validation */
+  var regObj = {
+    email: /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/,
+    tel: /^\d{3}-\d{3}-\d{4}$/,
+    name: /^[а-яА-яіІЇїЄєґҐёЁA-Za-z]+$/
+  };
 
-    var errors = {
-      name: 'Вы ввели слишком длинное имя или слишком короткое имя',
-      empty: 'Введите значение в поле',
-      emailTel: 'Вы ввели неверный телефон или email'
-    };
+  var contactInputs = document.querySelectorAll('.form__input');
+
+  var hasError = function(field) {
+    if(field.type === 'button' || field.type === 'submit') {
+      return ;
+    }
     
-    var len = field.value.length;
+    var emailTest = regObj.email.test(field.value);
+    var telephoneTest = regObj.tel.test(field.value);
 
-    function isEmpty(value) {
-      return !!value;
+    if(field.value === '') {
+      return 'Пожалуйста заполните поле';
+    }
+    if(field.name === 'tel-email' && !telephoneTest && !emailTest) { 
+      return 'Вы ввели неверный телефон или email'
     }
 
-    function showError(error, field) {
-      field.classList.add('error');
+    if(field.name === 'name' && (field.value.length > 20 || field.value.length < 3 || !regObj.name.test(field.value))) {
+      return 'Вы ввели неправильное имя'
+    }
+  };
 
+  var showError = function (field, error) {
+
+      // Add error class to field
+      field.classList.add('form__error');
+
+      // Get field id or name
       var id = field.id || field.name;
       if (!id) return;
 
       // Check if error message field already exists
       // If not, create one
-      var message = field.form.querySelector('.error-message#error-for-' + id );
+      var message = field.form.querySelector('.form__error-message#error-for-' + id );
       if (!message) {
           message = document.createElement('div');
-          message.className = 'error-message';
+          message.className = 'form__error-message';
           message.id = 'error-for-' + id;
           field.parentNode.insertBefore( message, field.nextSibling );
       }
@@ -86,40 +100,74 @@
       // Show error message
       message.style.display = 'block';
       message.style.visibility = 'visible';
-    }
+  };
 
-    if (!isEmpty(field.value)) {
-      showError(errors.empty, field);
-      return false;
-    }
+  var removeError = function(field) {
+    // Remove error class to field
+    field.classList.remove('form__error');
 
-    switch (field.name) {
-      case "tel-email":
-        if (!regObj.email.test(field.value) && !regObj.tel.test(field.value)) {
-          console.log("вы ввели неправильный телефон или email");
-          return false;
-        }
-        break;
-      case "name":
-        if (len > 20 && len < 3) {
-          console.log("превышена длина имени. Максимальная длина 20 символов.");
-          return false;
-        }
-    }
-    return true;
+    // Remove ARIA role from the field
+    field.removeAttribute('aria-describedby');
+
+    // Get field id or name
+    var id = field.id || field.name;
+    if (!id) return;
+
+    // Check if an error message is in the DOM
+    var message = field.form.querySelector('.form__error-message#error-for-' + id + '');
+    if (!message) return;
+
+    // If so, hide it
+    message.innerHTML = '';
+    message.style.display = 'none';
+    message.style.visibility = 'hidden';
   }
 
-  button.addEventListener("click", function() {
-    if (checkValidity(text) && checkValidity(emailField) ) {
-      if (link.className === "pdf-link") {
-        link.click();
-      } else {
-        document.body.appendChild(link);
-        link.click();
-      }
+  document.addEventListener('blur', function (event) {
+    var error = hasError(event.target);
+    if(error) {
+      showError(event.target, error);
+      return ;
     }
-  });
+    removeError(event.target);
+   }, true);
+
+  button.addEventListener('click', function(event) {
+    // Get all of the form elements
+    var fields = event.target.parentNode.elements;
+
+    // Validate each field
+    // Store the first field with an error to a variable so we can bring it into focus later
+    var error, hasErrors;
+    for (var i = 0; i < fields.length; i++) {
+        error = hasError(fields[i]);
+        if (error) {
+            showError(fields[i], error);
+            if (!hasErrors) {
+                hasErrors = fields[i];
+            }
+        }
+    }
+
+    // If there are errrors, don't submit form and focus on first element with error
+    if(hasErrors) {
+        event.preventDefault();
+        hasErrors.focus();
+    } else if(link.className === "pdf-link") {
+        link.click();
+    } else {      
+      document.body.appendChild(link);
+      link.click();
+    } 
+
+    // Otherwise, let the form submit normally
+    // You could also bolt in an Ajax form submit process here
+
+  }, false);
+
 })();
+
+
 
 (function() {
   var lb = new Lightbox({
