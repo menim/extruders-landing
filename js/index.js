@@ -123,6 +123,20 @@
     message.style.visibility = 'hidden';
   }
 
+  var sendData = function(form) {
+    var formData = new FormData(form);
+    var xhr = new XMLHttpRequest();
+    xhr.open("POST", form.action);
+    xhr.send(formData);
+    
+    var len = form.length;
+    for(var i = 0; i < len; i++) {
+      if(form[i].type !== 'submit') {
+        form[i].value = '';
+      }
+    }
+  }
+
   document.addEventListener('blur', function (event) {
     var error = hasError(event.target);
     if(error) {
@@ -153,20 +167,18 @@
         event.preventDefault();
         hasErrors.focus();
     } else if(link.className === "pdf-link") {
-        link.click();
-    } else {      
+      event.preventDefault()
+      sendData(event.target);
+      link.click();
+    } else {
+      event.preventDefault();
+      sendData(event.target);
       document.body.appendChild(link);
       link.click();
     } 
-
-    // Otherwise, let the form submit normally
-    // You could also bolt in an Ajax form submit process here
-
   }, false);
 
 })();
-
-
 
 (function() {
   var lb = new Lightbox({
