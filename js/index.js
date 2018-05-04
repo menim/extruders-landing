@@ -132,10 +132,9 @@
     removeError(event.target);
    }, true);
 
-  button.addEventListener('click', function(event) {
+  document.addEventListener('submit', function(event) {
     // Get all of the form elements
-    var fields = event.target.parentNode.elements;
-
+    var fields = event.target.elements;
     // Validate each field
     // Store the first field with an error to a variable so we can bring it into focus later
     var error, hasErrors;
