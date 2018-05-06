@@ -47,13 +47,19 @@
     margin: 0;
   }
 
-  &__label {
-    display: block;
+  &__input-wrapper {
     margin: .8em 0;
+    position: relative;
+  }
 
-    @include media-breakpoint-up(lg) {
-      margin: 1.8em 0;
-    }
+  &__label {
+    color: $gray;
+    left: 1em;
+    position: absolute;
+    text-align: left;
+    top: 50%;
+    transform: translateY(-50%);
+    transition: all ease-in .2s;
   }
 
   &__input {
@@ -78,11 +84,19 @@
   }
 
   &__error-message {
-  color: red;
-  font-size: 1rem;
-  font-style: italic;
-  margin-bottom: 1em;
-  margin-top: .5em;
-  text-align: left; 
+    color: red;
+    font-size: 1rem;
+    font-style: italic;
+    margin-bottom: 1em;
+    margin-top: .5em;
+    text-align: left; 
+  }
 }
+
+.form__input:focus+.form__label,
+.form__error-message+.form__label,
+.form__input:valid+.form__label {
+  font-size: $font-size-x-sm;
+  top: 4px;
+  transform: translateY(0);
 }

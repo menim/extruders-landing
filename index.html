@@ -288,12 +288,14 @@
           <h4 class="form__avatar-subheadline">Менеджер по продажам</h4>
           </figcaption>
         </figure>
-        <label class="form__label" for="">
-          <input id="tel-email" class="form__input" name="tel-email" type="text" />
-        </label>
-        <label class="form__label" for="name">
-          <input id="name" class="form__input" name="name" type="text" autocorrect="off" />
-        </label>
+        <div class="form__input-wrapper">
+          <input id="name" class="form__input" name="name" type="text" required />
+          <label class="form__label" for="name">Имя</label>
+        </div>
+        <div class="form__input-wrapper">
+          <input id="tel-email" class="form__input" name="tel-email" type="text" required />
+          <label class="form__label" for="tel-email">Телефон или E-mail</label>
+        </div>
         <button class="basic-btn basic-btn basic-btn_theme_third">Отправить</button>
       </form>
     </div>

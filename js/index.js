@@ -88,7 +88,7 @@
           message = document.createElement('div');
           message.className = 'form__error-message';
           message.id = 'error-for-' + id;
-          field.parentNode.insertBefore( message, field.nextSibling );
+          field.parentNode.insertBefore(message, field.nextSibling );
       }
 
       // Add ARIA role to the field
