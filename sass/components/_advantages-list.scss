@@ -35,7 +35,7 @@
 
 .advantages-list li:nth-child(n+4) {
 
-  @include media-breakpoint-up(sm) {
+  @include media-breakpoint-up(lg) {
     margin-top: 4em;
   }
 }
