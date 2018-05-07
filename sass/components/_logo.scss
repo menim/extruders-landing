@@ -36,9 +36,12 @@
   }
 
   &__text_header {
+    text-align: center;
 
     @include media-breakpoint-up(md) {
+      text-align: left;
       margin-right: -45px;
+      width: 82%;
     }
   }
 }
