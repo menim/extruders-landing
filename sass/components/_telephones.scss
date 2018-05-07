@@ -1,11 +1,12 @@
 .telephones {
   color: $ecru-white;
   font-family: 'Roboto Bold', sans-serif;
-  text-align: center;
   margin-top: 1em;
+  text-align: center;
 
-  @include media-breakpoint-up(xl) { 
+  @include media-breakpoint-up(xl) {
     margin-top: 0;
+    text-align: right;
   }
 
   &__item {
@@ -20,21 +21,21 @@
     }
 
 
-    @include media-breakpoint-up(xl) { 
+    @include media-breakpoint-up(xl) {
       font-size: $font-size-x-md;
     }
   }
 
   &_header_theme {
-    position: relative;
     padding-left: 0;
+    position: relative;
 
     @include media-breakpoint-up(md) {
       padding-left: 3em;
     }
 
     @include media-breakpoint-up(xl) {
-      padding-left: 4.6em
+      padding-left: 4.7em;
     }
 
     &::before {
@@ -44,7 +45,7 @@
       display: none;
       fill: $ecru-white;
       position: absolute;
- 
+
       @include media-breakpoint-up(md) {
         display: block;
         height: 42px;

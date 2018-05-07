@@ -2,9 +2,9 @@
   color: $ecru-white;
   font-size: $font-size-regular;
   text-align: center;
-  
+
   @include media-breakpoint-up(md) {
-    text-align: left
+    text-align: left;
   }
 
   &__img {
@@ -18,7 +18,7 @@
 
     @include media-breakpoint-up(xl) {
       height: 88px;
-      margin-right: 1.75em;
+      margin-right: 1.42em;
       width: 85px;
     }
   }
@@ -39,8 +39,8 @@
     text-align: center;
 
     @include media-breakpoint-up(md) {
-      text-align: left;
       margin-right: -45px;
+      text-align: left;
       width: 82%;
     }
   }

@@ -2,10 +2,11 @@
   color: $ecru-white;
   font-family: Roboto, sans-serif;
   font-size: $font-size-btn;
-  line-height: 1.7;
+  line-height: 1.6;
 
   @include media-breakpoint-up(xl) {
     font-size: $font-size-md;
+    margin-top: .45em;
   }
 
   &_color_tradewind {
