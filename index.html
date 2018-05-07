@@ -268,7 +268,7 @@
                 </span>
               </div>
             </div>
-            <div class="contacts__map col-8 m-t-sm">
+            <div id="map" class="contacts-map col-12 com-md-7 col-lg-8 m-t-sm">
             </div>
           </div>
         </div>
@@ -302,5 +302,21 @@
     <script src="js/Swipe.js"></script>
     <script src="js/slider.js"></script>
     <script src="js/index.js"></script>
+    <script>
+      function initMap() {
+        var uluru = {lat: -25.363, lng: 131.044};
+        var map = new google.maps.Map(document.getElementById('map'), {
+          zoom: 4,
+          center: uluru
+        });
+        var marker = new google.maps.Marker({
+          position: uluru,
+          map: map
+        });
+      }
+    </script>
+    <script async defer
+    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBgoiAr0KAnb4441G_QjeQvUeZXrmFHMEQ&callback=initMap">
+    </script>
   </body>
 </html>
