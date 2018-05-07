@@ -7,10 +7,15 @@
   color: $white;
   cursor: pointer;
   font-family: 'Roboto Bold', sans-serif;
-  font-size: $font-size-btn;
+  font-size: $font-size-regular;
   letter-spacing: .02em;
   line-height: 1;
-  padding: 1.1em 2.1em 1.2em;
+  padding: 1.1em 1.7em 1.2em;
+
+  @include media-breakpoint-up(sm) {
+    font-size: $font-size-btn;
+    padding: 1.1em 2.1em 1.2em;
+  }
 
   &:hover,
   &:focus {
