@@ -1,5 +1,16 @@
 .get-pdf {
+  margin-bottom: 2.5em;
+
+  @include media-breakpoint-up(md) {
+    margin-bottom: 0;
+  }
+
   &__img {
-    margin-bottom: 3em;
+    margin-bottom: 1.5em;
+
+    @include media-breakpoint-up(md) {
+      margin-bottom: 3em;
+    }
   }
 }
+

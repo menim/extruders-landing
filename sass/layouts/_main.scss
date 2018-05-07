@@ -1,8 +1,12 @@
 .main {
   background-color: $white;
   display: block;
-  padding-bottom: 6em;
+  padding-bottom: 3em;
   padding-top: 2.5em;
+
+  @include media-breakpoint-up(md) {
+    padding-bottom: 6em;
+  }
 
   @include media-breakpoint-up(xl) {
     padding-bottom: 11.125em;
