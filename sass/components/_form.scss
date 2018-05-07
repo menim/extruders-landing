@@ -44,11 +44,12 @@
 
   &__avatar-subheadline {
     font-size: $font-size-x-sm;
-    margin: 0;
+    padding-bottom: .7em;
+    margin-top: 0;
   }
 
   &__input-wrapper {
-    margin: .8em 0;
+    margin: .8em 0 1.06em;
     position: relative;
   }
 
@@ -71,25 +72,29 @@
     font-size: $font-size-btn;
     height: 2em;
     padding-left: 1em;
-    width: 100%;
     -webkit-appearance: none;
+    width: 100%;
 
     @include media-breakpoint-up(lg) {
       height: 3em;
     }
   }
 
+  &__basic-btn {
+    margin-top: .45em;
+  }
+
   &__error {
-    border: 1px red solid;
+    border: 1px $red solid;
   }
 
   &__error-message {
-    color: red;
+    color: $red;
     font-size: 1rem;
     font-style: italic;
     margin-bottom: 1em;
     margin-top: .5em;
-    text-align: left; 
+    text-align: left;
   }
 }
 
