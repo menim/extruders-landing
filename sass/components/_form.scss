@@ -15,23 +15,39 @@
   }
 
   &__avatar {
-    border: 8px solid $white;
+    border: 4px solid $white;
     border-radius: 50%;
-    margin-top: -50px;
+    height: 70px;
+    margin-top: -35px;
     position: relative;
+    width: 70px;
+
+    @include media-breakpoint-up(sm) {
+      border-width: 8px;
+      height: 100px;
+      margin-top: -50px;
+      width: 100px;
+    }
   }
 
   &::after {
     border-radius: 50% 50% 0 0;
     box-shadow: 1px 1px 10px 5px $shark-op-28;
     content: '';
-    height: 100px;
+    height: 70px;
     left: 50%;
-    margin-left: -50px;
+    margin-left: -35px;
     position: absolute;
-    top: -50px;
-    width: 100px;
+    top: -35px;
+    width: 70px;
     z-index: -1;
+
+    @include media-breakpoint-up(sm) {
+      height: 100px;
+      margin-left: -50px;
+      top: -50px;
+      width: 100px;
+    }
   }
 
   &__avatar-headline {
@@ -40,12 +56,19 @@
     margin-bottom: .4em;
     margin-top: 0;
     text-transform: uppercase;
+
+    @include media-breakpoint-up(sm) {
+      font-size: $font-size-x-sm;
+    }
   }
 
   &__avatar-subheadline {
     font-size: $font-size-x-sm;
-    padding-bottom: .7em;
     margin-top: 0;
+
+    @include media-breakpoint-up(sm) {
+      padding-bottom: .7em;
+    }
   }
 
   &__input-wrapper {
@@ -69,14 +92,16 @@
     box-shadow: inset 0 1px 6px 0 $black-op-40;
     color: $gray;
     font-family: 'Roboto Bold', sans-serif;
-    font-size: $font-size-btn;
-    height: 2em;
-    padding-left: 1em;
+    font-size: $font-size-sm;
+    height: 3em;
     -webkit-appearance: none;
+    padding-left: 1em;
+    padding-top: 1em;
     width: 100%;
 
-    @include media-breakpoint-up(lg) {
-      height: 3em;
+    @include media-breakpoint-up(sm) {
+      font-size: $font-size-btn;
+      padding-top: 0;
     }
   }
 
@@ -90,18 +115,22 @@
 
   &__error-message {
     color: $red;
-    font-size: 1rem;
+    font-size: $font-size-sm;
     font-style: italic;
     margin-bottom: 1em;
     margin-top: .5em;
     text-align: left;
+
+    @include media-breakpoint-up(sm) {
+      font-size: $font-size-regular;
+    }
   }
 }
 
 .form__input:focus+.form__label,
 .form__error-message+.form__label,
 .form__input:valid+.form__label {
-  font-size: $font-size-x-sm;
+  font-size: 12px;
   top: 4px;
   transform: translateY(0);
 }
