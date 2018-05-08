@@ -26,6 +26,8 @@ var autoprefixer = require('gulp-autoprefixer');
 
 var babel = require('gulp-babel');
 
+var concat = require('gulp-concat');
+
 
 gulp.task('toES6', function() {
 	gulp.src('js/*.js')
@@ -74,9 +76,15 @@ gulp.task('html', function() {
 })
 
 gulp.task('uglify', function(){
-  return gulp.src('js/*.js').
-         pipe(uglify())
+  return gulp.src('js/*.js')
+         .pipe(uglify())
          .pipe(gulp.dest('dist/js'))
+});
+
+gulp.task('concat', function(){
+  return gulp.src(['js/Swipe.js', 'js/slider.js', 'js/index.js'])
+         .pipe(concat('all.js'))
+         .pipe(gulp.dest('dist/js'));
 });
 
 gulp.task('minifycss', function(){
@@ -110,7 +118,7 @@ gulp.task('watch',['browserSync', 'sass'], function() {
 });
 
 gulp.task('build', function(callback) {
-  runSequence('clean:dist', ['sass', 'prefix', 'minifycss', 'uglify', 'images', 'html'], callback)
+  runSequence('clean:dist', ['sass', 'prefix', 'minifycss', 'uglify','concat', 'images', 'html'], callback)
 });
 
 gulp.task('default', function(callback) {
