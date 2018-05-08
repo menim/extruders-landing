@@ -28,6 +28,8 @@ var babel = require('gulp-babel');
 
 var concat = require('gulp-concat');
 
+var purgecss = require('gulp-purgecss')
+
 
 gulp.task('toES6', function() {
 	gulp.src('js/*.js')
@@ -90,6 +92,17 @@ gulp.task('minifycss', function(){
   return gulp.src('css/*.css').
          pipe(cssnano())
          .pipe(gulp.dest('dist/css'))
+});
+
+gulp.task('purgecss', function() {
+  return gulp
+    .src('dist/css/main.css')
+    .pipe(
+      purgecss({
+        content: ['*.html']
+      })
+    )
+    .pipe(gulp.dest('dist/css/'))
 });
 
 gulp.task('browserSync', function() {
