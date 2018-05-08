@@ -1,14 +1,14 @@
 .contacts-map {
-  overflow: hidden;
-  padding-bottom: 56.25%;
-  position: relative;
   height: 0;
-}
+  overflow: hidden;
+  padding-bottom: 30%;
+  position: relative;
 
-.contacts-map iframe {
-  left: 0;
-  top: 0;
-  height: 100%;
-  width: 100%;
-  position: absolute;
+  & iframe {
+    height: 100%;
+    left: 0;
+    position: absolute;
+    top: 0;
+    width: 100%;
+  }
 }
