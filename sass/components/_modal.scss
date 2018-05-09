@@ -79,3 +79,17 @@
     }
   }
 }
+
+@media (max-height: 800px) {
+  .modal {
+    padding: 2.625em 1.875em 4.875em;
+  }
+
+  .modal__headline {
+    font-size: $font-size-md;
+  }
+
+  .modal__subheadline {
+    font-size: $font-size-regular;
+  }
+}
