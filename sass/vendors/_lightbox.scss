@@ -120,7 +120,8 @@
 }
 .m-lightbox__counter {
   position: absolute;
-  bottom: 1em;
+  bottom: 0;
+  font-size: $font-size-regular;
   left: 50%;
   -webkit-transform: translateX(-50%);
           transform: translateX(-50%);
