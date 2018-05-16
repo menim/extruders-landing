@@ -1,12 +1,12 @@
 .form {
   background-color: $white;
   border-radius: 5px;
-  box-shadow: 1px 1px 10px 5px $shark-op-28;
+  box-shadow: 1px 1px 10px 5px $shark-op-10;
   padding: 0 1.4em .6875em;
   position: relative;
 
   @include media-breakpoint-up(lg) {
-    padding: 0 2.4em 1.6875em;
+    padding: 0 1.4em 1.6875em;
   }
 
   &__header {
@@ -24,15 +24,15 @@
 
     @include media-breakpoint-up(sm) {
       border-width: 8px;
-      height: 100px;
-      margin-top: -50px;
-      width: 100px;
+      height: 90px;
+      margin-top: -45px;
+      width: 90px;
     }
   }
 
   &::after {
     border-radius: 50% 50% 0 0;
-    box-shadow: 1px 1px 10px 5px $shark-op-28;
+    box-shadow: 1px 1px 10px 5px $shark-op-10;
     content: '';
     height: 70px;
     left: 50%;
@@ -43,27 +43,24 @@
     z-index: -1;
 
     @include media-breakpoint-up(sm) {
-      height: 100px;
-      margin-left: -50px;
-      top: -50px;
-      width: 100px;
+      height: 90px;
+      margin-left: -45px;
+      top: -45px;
+      width: 90px;
     }
   }
 
   &__avatar-headline {
-    font-size: $font-size-sm;
+    font-size: $font-size-x-sm;
     letter-spacing: .02em;
     margin-bottom: .4em;
     margin-top: 0;
     text-transform: uppercase;
-
-    @include media-breakpoint-up(sm) {
-      font-size: $font-size-x-sm;
-    }
   }
 
   &__avatar-subheadline {
     font-size: $font-size-x-sm;
+    font-weight: 400;
     margin-top: 0;
 
     @include media-breakpoint-up(sm) {
@@ -72,12 +69,13 @@
   }
 
   &__input-wrapper {
-    margin: .8em 0 1.06em;
+    margin: .5em 0;
     position: relative;
   }
 
   &__label {
     color: $gray;
+    font-size: $font-size-xx-sm;
     left: 1em;
     position: absolute;
     text-align: left;
@@ -89,18 +87,16 @@
   &__input {
     border: 0;
     border-radius: 5px;
-    box-shadow: inset 0 1px 6px 0 $black-op-40;
+    box-shadow: inset 0 0 2px 0 $black-op-40;
     color: $gray;
-    font-family: 'Roboto Bold', sans-serif;
+    font-family: 'Roboto', sans-serif;
     font-size: $font-size-sm;
-    height: 3em;
+    height: 3.2em;
     -webkit-appearance: none;
     padding-left: 1em;
-    padding-top: 1em;
     width: 100%;
 
     @include media-breakpoint-up(sm) {
-      font-size: $font-size-btn;
       padding-top: 0;
     }
   }
@@ -115,22 +111,18 @@
 
   &__error-message {
     color: $red;
-    font-size: $font-size-sm;
+    font-size: $font-size-xxx-sm;
     font-style: italic;
     margin-bottom: 1em;
     margin-top: .5em;
     text-align: left;
-
-    @include media-breakpoint-up(sm) {
-      font-size: $font-size-regular;
-    }
   }
 }
 
 .form__input:focus+.form__label,
 .form__error-message+.form__label,
 .form__input:valid+.form__label {
-  font-size: 12px;
+  font-size: $font-size-xxx-sm;
   top: 4px;
   transform: translateY(0);
 }

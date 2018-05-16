@@ -1,3 +1,15 @@
 .footer {
-  background-color: $elephant;
+  background-image: url('../images/header-bg.jpg');
+  background-size: cover;
+  position: relative;
+
+  &:before {
+    background-color: $black-op-90;
+    bottom: 0;
+    content: '';
+    left: 0;
+    position: absolute;
+    right: 0;
+    top: 0;
+  }
 }

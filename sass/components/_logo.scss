@@ -10,16 +10,15 @@
   &__img {
     margin-right: .3em;
     vertical-align: middle;
-    width: 65px;
+    width: 66px;
+    height: 66px;
 
     @include media-breakpoint-up(md) {
       margin-right: 1em;
     }
 
     @include media-breakpoint-up(xl) {
-      height: 88px;
       margin-right: 1.42em;
-      width: 85px;
     }
   }
 
@@ -30,8 +29,8 @@
     text-align: left;
     vertical-align: middle;
 
-    @include media-breakpoint-up(xl) {
-      font-size: $font-size-regular;
+    @include media-breakpoint-up(md) {
+      font-size: $font-size-xx-sm;
     }
   }
 

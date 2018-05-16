@@ -14,7 +14,7 @@
   }
 
   @include media-breakpoint-up(xl) {
-    padding-bottom: 14.6875em;
+    padding-bottom: 145px;
   }
 
   &::before {
@@ -39,11 +39,11 @@
     }
 
     @include media-breakpoint-up(xl) {
-      margin-top: 152px;
+      margin-top: 145px;
     }
   }
 
   &__basic-btn {
-    margin-top: 35px;
+    margin-top: 20px;
   }
 }

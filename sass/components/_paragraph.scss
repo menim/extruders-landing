@@ -1,11 +1,10 @@
 .paragraph {
   color: $ecru-white;
   font-family: Roboto, sans-serif;
-  font-size: $font-size-btn;
+  font-size: $font-size-regular;
   line-height: 1.6;
 
-  @include media-breakpoint-up(xl) {
-    font-size: $font-size-md;
+  @include media-breakpoint-up(md) {
     margin-top: .45em;
   }
 

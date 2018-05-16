@@ -3,17 +3,16 @@
   background-image: linear-gradient($wild-willow 0%, $sushi 100%);
   border: 0;
   border-radius: 30px;
-  box-shadow: 3.078px 3.94px 5px 0 $black-op-30;
+  box-shadow: 2px 2px 2px 0 $black-op-20;
   color: $white;
   cursor: pointer;
-  font-family: 'Roboto Bold', sans-serif;
-  font-size: $font-size-regular;
+  font-family: 'Roboto', sans-serif;
+  font-size: $font-size-sm;
   letter-spacing: .02em;
   line-height: 1;
   padding: 1.1em 1.7em 1.2em;
 
   @include media-breakpoint-up(sm) {
-    font-size: $font-size-btn;
     padding: 1.1em 2.1em 1.2em;
   }
 
@@ -38,7 +37,7 @@
     background-color: $red;
     background-image: linear-gradient(to top, $red 0%, $carnation 100%);
     border-radius: 28px;
-    min-width: 14.5em;
+    min-width: 12.5em;
     padding-bottom: 1.1em;
 
     &:hover,

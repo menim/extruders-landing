@@ -5,8 +5,16 @@
     margin-bottom: 0;
   }
 
+  &__title {
+    color: $elephant;
+    font-family: 'Roboto', sans-serif;
+    font-size: $font-size-md;
+    margin-bottom: 2em;
+  }
+
   &__img {
-    margin-bottom: 1.5em;
+    display: block;
+    margin:0 auto 1.5em;
 
     @include media-breakpoint-up(md) {
       margin-bottom: 3em;

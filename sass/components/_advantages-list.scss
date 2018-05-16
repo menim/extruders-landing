@@ -15,11 +15,11 @@
   &__title {
     color: $sushi;
     font-family: 'Roboto Bold', sans-serif;
-    font-size: $font-size-md;
+    font-size: $font-size-tel;
     margin-top: 1.3em;
 
     @include media-breakpoint-up(xl) {
-      margin-top: 2.35em;
+      margin-top: 1.6em;
     }
   }
 
@@ -30,6 +30,10 @@
     line-height: 1.5;
     margin-bottom: 0;
     margin-top: 1.3em;
+
+    @include media-breakpoint-up(sm) {
+      padding: 0 1em;
+    };
   }
 }
 

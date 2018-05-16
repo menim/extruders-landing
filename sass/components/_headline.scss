@@ -7,10 +7,6 @@
   text-transform: uppercase;
 
   @include media-breakpoint-up(md) {
-    font-size: $font-size-lg;
-  }
-
-  @include media-breakpoint-up(xl) {
     font-size: $font-size-x-lg;
   }
 }

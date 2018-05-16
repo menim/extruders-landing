@@ -11,18 +11,18 @@
 }
 
 .m-b-lg {
-  margin-bottom: 2.75em;
+  margin-bottom: 2.5em;
 
   @include media-breakpoint-up(md) {
-    margin-bottom: 4.75em;
+    margin-bottom: 4.5em;
   }
 
   @include media-breakpoint-up(lg) {
-    margin-bottom: 6.75em;
+    margin-bottom: 6.5em;
   }
 
   @include media-breakpoint-up(xl) {
-    margin-bottom: 8.75em;
+    margin-bottom: 7.5em;
   }
 }
 

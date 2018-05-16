@@ -22,13 +22,16 @@ $shadow-green: #9ec9c6;
 
 
 //colors with opacity 
+$black-op-90: rgba(0, 0, 0, .9);
 $black-op-70: rgba(0, 0, 0, .7);
 $black-op-30: rgba(0, 0, 0, .3);
 $black-op-40: rgba(0, 0, 0, .4);
+$black-op-20: rgba(0, 0, 0, .4);
 $elephant-op-55: rgba(15, 48, 71, .55);
-$shark-op-28: rgba(41, 42, 44, .28);
+$shark-op-10: rgba(41, 42, 44, .1);
 
 //fonts 
+$font-size-xxx-sm: 1.1rem;
 $font-size-xx-sm: 1.2rem; // 12
 $font-size-x-sm: 1.4rem; // 14
 $font-size-sm: 1.5rem;  // 15
