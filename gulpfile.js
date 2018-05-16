@@ -28,7 +28,9 @@ var babel = require('gulp-babel');
 
 var concat = require('gulp-concat');
 
-var purgecss = require('gulp-purgecss')
+var purgecss = require('gulp-purgecss');
+
+var svgSprite = require('gulp-svg-sprite');
 
 
 gulp.task('toES6', function() {
@@ -104,6 +106,20 @@ gulp.task('purgecss', function() {
     )
     .pipe(gulp.dest('dist/css/'))
 });
+
+gulp.task('svgsprite', function() {
+ return  gulp.src('images/*.svg')
+    .pipe(svgSprite(  config = {
+    mode: {
+      css: { // Activate the «css» mode
+        render: {
+          css: true // Activate CSS output (with default options)
+        }
+      }
+    }
+  }))
+    .pipe(gulp.dest('dist'))
+  });
 
 gulp.task('browserSync', function() {
 	browserSync.init({
