@@ -351,7 +351,7 @@ var Lightbox = (_temp = _class = function Lightbox(_ref) {
                         /* Form validation */
   var regObj = {
     email: /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/,
-    tel: /^\d{3}-\d{3}-\d{4}$/,
+    tel: /\(?([0-9]{3})\)?([ .-]?)([0-9]{3})\2([0-9]{4})/,
     name: /^[а-яА-яіІЇїЄєґҐёЁA-Za-z]+$/
   };
 
@@ -428,7 +428,7 @@ var Lightbox = (_temp = _class = function Lightbox(_ref) {
     message.style.visibility = 'hidden';
   }
 
-  var sendData = function(form) {
+    var sendData = function(form) {
     var formData = new FormData(form);
     var xhr = new XMLHttpRequest();
     xhr.open("POST", form.action);
