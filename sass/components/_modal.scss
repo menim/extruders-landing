@@ -25,10 +25,6 @@
     @include media-breakpoint-up(lg) {
       font-size: $font-size-x-lg;
     }
-
-    @include media-breakpoint-up(xl) {
-      font-size: $font-size-xx-lg;
-    }
   }
 
   &__subheadline {
@@ -58,16 +54,5 @@
     @include media-breakpoint-up(md) {
       font-size: $font-size-md;
     }
-  }
-}
-
-@media (max-height: 800px) {
-
-  .modal__headline {
-    font-size: $font-size-md;
-  }
-
-  .modal__subheadline {
-    font-size: $font-size-regular;
   }
 }
