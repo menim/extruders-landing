@@ -7,39 +7,23 @@
 }
 
 .full-width {
-  width: 100%;
   height: auto;
+  width: 100%;
 }
 
-.m-b-lg {
+.m-b {
   margin-bottom: 2.5em;
 
   @include media-breakpoint-up(md) {
-    margin-bottom: 4.5em;
-  }
-
-  @include media-breakpoint-up(lg) {
-    margin-bottom: 6.5em;
-  }
-
-  @include media-breakpoint-up(xl) {
-    margin-bottom: 7.5em;
+    margin-bottom: 5em;
   }
 }
 
-.m-t-md {
-  margin-top: 1.375em;
+.m-t {
+  margin-top: 2.5em;
 
   @include media-breakpoint-up(md) {
-    margin-top: 2.375em;
-  }
-
-  @include media-breakpoint-up(lg) {
-    margin-top: 3.375em;
-  }
-
-  @include media-breakpoint-up(xl) {
-    margin-top: 4.375em;
+    margin-top: 5em;
   }
 }
 
@@ -53,7 +37,7 @@
   @include media-breakpoint-up(lg) {
     margin-bottom: 4em;
   }
-  
+
   @include media-breakpoint-up(xl) {
     margin-bottom: 5em;
   }

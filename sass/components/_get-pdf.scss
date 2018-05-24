@@ -10,11 +10,12 @@
     font-family: 'Roboto', sans-serif;
     font-size: $font-size-md;
     margin-bottom: 2em;
+    margin-top: 0;
   }
 
   &__img {
     display: block;
-    margin:0 auto 1.5em;
+    margin: 0 auto 1.5em;
 
     @include media-breakpoint-up(md) {
       margin-bottom: 3em;
