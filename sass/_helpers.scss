@@ -86,7 +86,7 @@
 }
 
 .is-success {
-  animation-iteration-count: 1;
+  animation-play-state: paused;
   border-right-color: $sushi;
 
   &::before {
