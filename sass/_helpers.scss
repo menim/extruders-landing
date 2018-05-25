@@ -72,21 +72,21 @@
 }
 
 .is-loading {
-  display: block;
-  width: 35px;
-  height: 35px;
-  border-radius: 50%;
+  animation: loader 500ms linear infinite;
   background-color: transparent;
   border: 2px solid $sushi;
+  border-radius: 50%;
   border-right-color: transparent;
-  animation: loader 500ms linear infinite;
+  display: block;
+  height: 35px;
+  margin: 0 auto;
   overflow: hidden;
   position: relative;
-  margin: 0 auto;
+  width: 35px;
 }
 
 .is-success {
-  animation-iteration-count: 0;
+  animation-iteration-count: 1;
   border-right-color: $sushi;
 
   &::before {
