@@ -63,6 +63,58 @@
   z-index: 2;
 }
 
-.hide {
+.is-hide {
   display: none;
+}
+
+.transition-all {
+  transition: all .2s ease;
+}
+
+.is-loading {
+  display: block;
+  width: 35px;
+  height: 35px;
+  border-radius: 50%;
+  background-color: transparent;
+  border: 2px solid $sushi;
+  border-right-color: transparent;
+  animation: loader 500ms linear infinite;
+  overflow: hidden;
+  position: relative;
+  margin: 0 auto;
+}
+
+.is-success {
+  animation-iteration-count: 0;
+  border-right-color: $sushi;
+
+  &::before {
+    animation: check-mark 500ms linear forwards;
+    border: solid $sushi;
+    border-width: 2px 2px 0 0;
+    content: '';
+    display: block;
+    height: 6px;
+    left: 50%;
+    margin-left: -5px;
+    margin-top: -4px;
+    opacity: 0;
+    position: absolute;
+    top: 50%;
+    transform: rotate(125deg);
+    width: 10px;
+  }
+}
+
+@keyframes check-mark {
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes loader {
+  100% {
+    transform: rotate(360deg);
+  }
 }

@@ -18,19 +18,20 @@
 
   openBtnList.forEach(function(item) {
     item.addEventListener("click", function() {
-      modal.classList.toggle("hide");
-      overlay.classList.toggle("hide");
+      modal.classList.toggle("is-hide");
+      overlay.classList.toggle("is-hide");
     });
   });
 
   overlay.addEventListener("click", function() {
-    modal.classList.toggle("hide");
-    overlay.classList.toggle("hide");
+    modal.classList.toggle("is-hide");
+    overlay.classList.toggle("is-hide");
   });
 })();
 
 (function() {
   var button = document.querySelector(".form button");
+  var buttonText = document.querySelector('.form button span');
   var emailField = document.getElementById("tel-email");
   var text = document.getElementById("name");
 
@@ -166,16 +167,26 @@
     if(hasErrors) {
         event.preventDefault();
         hasErrors.focus();
-    } else if(link.className === "pdf-link") {
+    } else {
       event.preventDefault()
       sendData(event.target);
+      button.classList.remove('basic-btn_theme_third');
+      button.classList.add('basic-btn_theme_reset');
+      buttonText.classList.add('is-loading');
+    
+      setTimeout(function() {
+        buttonText.classList.add('is-success');
+      }, 2000);
+
+      setTimeout(function() {
+        buttonText.classList.remove('is-success');
+        buttonText.classList.remove('is-loading');
+        button.classList.remove('basic-btn_theme_reset');
+        button.classList.add('basic-btn_theme_third');
+      }, 3500);
+
       link.click();
-    } else {
-      event.preventDefault();
-      sendData(event.target);
-      document.body.appendChild(link);
-      link.click();
-    } 
+    }
   }, false);
 
 })();

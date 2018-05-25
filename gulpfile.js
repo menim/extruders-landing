@@ -129,7 +129,6 @@ gulp.task('browserSync', function() {
 	})
 });
 
-
 gulp.task('sass', function() {
 	return gulp.src('sass/**/*.scss')
 	.pipe(sass())

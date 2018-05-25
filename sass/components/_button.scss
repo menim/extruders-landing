@@ -10,6 +10,7 @@
   font-size: $font-size-sm;
   letter-spacing: .02em;
   line-height: 1;
+  min-width: 12.5em;
   padding: 1.1em 1.7em 1.2em;
 
   @include media-breakpoint-up(sm) {
@@ -37,7 +38,6 @@
     background-color: $red;
     background-image: linear-gradient(to top, $red 0%, $carnation 100%);
     border-radius: 28px;
-    min-width: 12.5em;
     padding-bottom: 1.1em;
 
     &:hover,
@@ -46,6 +46,19 @@
       background-image: linear-gradient(to top, $milano-red 0%, $sanset-orange 100%);
     }
   }
+
+  &_theme_reset {
+    background: none;
+    box-shadow: none;
+
+    &:hover,
+    &:focus {
+      background: none;
+      box-shadow: none;
+    }
+  }
+
+
 }
 
 
