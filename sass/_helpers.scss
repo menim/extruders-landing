@@ -82,11 +82,10 @@
   margin: 0 auto;
   overflow: hidden;
   position: relative;
-  width: 35px;
 }
 
 .is-success {
-  animation-iteration-count: 1;
+  animation-play-state: paused;
   border-right-color: $sushi;
 
   &::before {
