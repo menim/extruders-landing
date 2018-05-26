@@ -35,9 +35,7 @@
   var emailField = document.getElementById("tel-email");
   var text = document.getElementById("name");
 
-  var link = document.createElement("a");
-  link.setAttribute("type", "hidden");
-  link.href = "catalog.pdf";
+  var link = document.querySelector('.cat-get');
   if (typeof link.download != "undefined") {
     link.download = "catalog.pdf";
   } else {
