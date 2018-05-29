@@ -32,6 +32,8 @@ var purgecss = require('gulp-purgecss');
 
 var svgSprite = require('gulp-svg-sprite');
 
+/*var critical = require('critical');*/
+
 
 gulp.task('toES6', function() {
 	gulp.src('js/*.js')
@@ -145,7 +147,7 @@ gulp.task('watch',['browserSync', 'sass'], function() {
 });
 
 gulp.task('build', function(callback) {
-  runSequence('clean:dist', ['sass', 'prefix', 'minifycss', 'uglify', 'images', 'html'], callback)
+  runSequence('clean:dist', ['sass', 'prefix', 'minifycss', 'concat', 'uglify', 'images', 'html'], callback)
 });
 
 gulp.task('default', function(callback) {
