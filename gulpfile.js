@@ -32,8 +32,17 @@ var purgecss = require('gulp-purgecss');
 
 var svgSprite = require('gulp-svg-sprite');
 
-/*var critical = require('critical');*/
+var critical = require('critical');
 
+gulp.task('critical', ['build'], function(cb) {
+  critical.generate({
+    inline: true, 
+    base: 'dist/',
+    src: 'index.html',
+    dest: 'dist.index-critical.html',
+    minify: true
+  });
+});
 
 gulp.task('toES6', function() {
 	gulp.src('js/*.js')
