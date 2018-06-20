@@ -54,12 +54,12 @@ gulp.task('toES6', function() {
 });
 
 gulp.task('prefix',function() {
-	gulp.src('css/*.css')
+	gulp.src('style.css')
 	.pipe(autoprefixer({
 		browsers: ['last 10 version'],
 		cascade: false
 	}))
-	.pipe(gulp.dest('css'))
+	.pipe(gulp.dest(''))
 })
 
 gulp.task('clean:dist', function() {
@@ -83,7 +83,7 @@ gulp.task('useref', function() {
 	return gulp.src('*.html')
 	.pipe(useref())
 	.pipe(gulpIf('js/*.js', uglify()))
-	.pipe(gulpIf('css/*.css', cssnano()))
+	.pipe(gulpIf('style.css', cssnano()))
 	.pipe(gulp.dest('dist'))
 });
 
@@ -103,20 +103,20 @@ gulp.task('concat', function(){
 });
 
 gulp.task('minifycss', function(){
-  return gulp.src('css/*.css').
+  return gulp.src('style.css').
          pipe(cssnano())
-         .pipe(gulp.dest('dist/css'))
+         .pipe(gulp.dest('dist'))
 });
 
 gulp.task('purgecss', function() {
   return gulp
-    .src('dist/css/main.css')
+    .src('dist/style.css')
     .pipe(
       purgecss({
         content: ['*.html']
       })
     )
-    .pipe(gulp.dest('dist/css/'))
+    .pipe(gulp.dest('dist/'))
 });
 
 gulp.task('svgsprite', function() {
@@ -144,7 +144,7 @@ gulp.task('browserSync', function() {
 gulp.task('sass', function() {
 	return gulp.src('sass/**/*.scss')
 	.pipe(sass())
-	.pipe(gulp.dest('css'))
+	.pipe(gulp.dest(''))
 	.pipe(browserSync.reload({
 		stream: true
 	}))
