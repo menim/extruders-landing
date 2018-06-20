@@ -45,9 +45,10 @@ gulp.task('critical', ['build'], function(cb) {
 });
 
 gulp.task('toES6', function() {
-	gulp.src('js/*.js')
+	gulp.src('js/all.js')
 	.pipe(babel({
-		presets:['env']
+    plugins: ['transform-object-assign'],
+		presets: ['env']
 	}))
 	.pipe(gulp.dest('js'))
 });
@@ -55,7 +56,7 @@ gulp.task('toES6', function() {
 gulp.task('prefix',function() {
 	gulp.src('css/*.css')
 	.pipe(autoprefixer({
-		browsers: ['last 5 version'],
+		browsers: ['last 10 version'],
 		cascade: false
 	}))
 	.pipe(gulp.dest('css'))
